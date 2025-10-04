@@ -60,7 +60,6 @@ a:focus {
   flex: 1;
 }
 
-
 .main-content {
   width: 100%;
   margin: 0;
@@ -71,8 +70,8 @@ a:focus {
 }
 
 .content-body {
-  width: min(100%, 34vw);
-  max-width: 640px;
+  width: min(100%, 50vw);
+  max-width: 1240px;
   margin-top: clamp(1.75rem, 4vw, 2.5rem);
 }
 
@@ -96,7 +95,6 @@ a:focus {
   margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
   overflow: hidden;
 }
-
 
 .headline span {
   display: inline-block;
@@ -172,7 +170,7 @@ a:focus {
 
 .cta-button span {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .cta-button .headline-film {

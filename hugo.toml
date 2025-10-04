@@ -10,3 +10,8 @@ name = 'Charlie Hooper-Williams'
 role = 'Technologist & Musician'
 cv_url = '/cv.pdf'
 email = 'c@harl.ie'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

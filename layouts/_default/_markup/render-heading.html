@@ -1,11 +1,17 @@
 {{- $tag := printf "h%d" .Level -}}
-{{- $anchor := .Anchor -}}
-<{{ $tag }}
-  {{- if $anchor }} id="{{ $anchor }}"{{ end }}
-  class="headline{{ with .Attributes.class }} {{ . }}{{ end }}"
-  {{- range $k, $v := .Attributes }}
-    {{- if ne $k "class" }} {{ $k }}="{{ $v }}"{{ end -}}
-  {{- end -}}>
-  <span>{{ .Text | safeHTML }}</span>
-  <video class="headline-film" src="{{ "video.webm" | relURL }}" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
-</{{ $tag }}>
+{{- $class := "headline" -}}
+{{- with .Attributes.class -}}
+  {{- $class = printf "%s %s" $class . -}}
+{{- end -}}
+{{- $attrs := "" -}}
+{{- with .Anchor -}}
+  {{- $attrs = printf "%s id=\"%s\"" $attrs . -}}
+{{- end -}}
+{{- $attrs = printf "%s class=\"%s\"" $attrs $class -}}
+{{- range $k, $v := .Attributes -}}
+  {{- if and (ne $k "class") (ne $k "id") -}}
+    {{- $attrs = printf "%s %s=\"%s\"" $attrs $k $v -}}
+  {{- end -}}
+{{- end -}}
+{{- $content := printf "<span>%s</span><video class=\"headline-film\" src=\"%s\" autoplay loop muted playsinline preload=\"auto\" aria-hidden=\"true\"></video>" (.Text | safeHTML) (relURL "video.webm") -}}
+{{- printf "<%s%s>%s</%s>" $tag $attrs $content $tag | safeHTML -}}
