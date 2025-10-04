@@ -1,6 +1,6 @@
 ---
 title: "Charlie Hooper-Williams"
-description: "I'm a technology leader and iOS developer with deep experience building products from concept through launch and scale. I've led engineering and product teams as CTO and CPO, while also staying close to the code as a hands-on developer. My work spans mobile, backend, and product strategy, with a focus on delivering clean, user-focused technology at pace. I thrive at the intersection of leadership and execution: shaping the vision, then making sure it ships."
+description: "Technology leader and iOS developer with deep experience building products from concept through launch and scale. I've led engineering and product teams as CTO and CPO, while also staying close to the code as a hands-on developer. My work spans mobile, backend, and product strategy, with a focus on delivering clean, user-focused technology at pace. I thrive at the intersection of leadership and execution: shaping the vision, then making sure it ships."
 ---
 
 {{< cvbutton >}}
