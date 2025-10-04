@@ -1,0 +1,10 @@
+{{ $email := .Site.Params.email | default "c@harl.ie" }}
+{{ $label := .Get 0 }}
+{{ if not $label }}
+  {{ $name := .Site.Params.name }}
+    {{ $label = "Say Hello" }}
+{{ end }}
+<a class="cta-button email-button" href="mailto:{{ $email }}">
+  <span>{{ $label }}</span>
+  <video class="headline-film" src="{{ "video.webm" | relURL }}" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
+</a>

@@ -6,6 +6,7 @@ canonifyURLs = true
 enableRobotsTXT = true
 
 [params]
-name = 'Charlie Harle'
+name = 'Charlie Hooper-Williams'
 role = 'Technologist & Musician'
 cv_url = '/cv.pdf'
+email = 'c@harl.ie'

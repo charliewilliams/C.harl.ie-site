@@ -1,0 +1,11 @@
+{{- $tag := printf "h%d" .Level -}}
+{{- $anchor := .Anchor -}}
+<{{ $tag }}
+  {{- if $anchor }} id="{{ $anchor }}"{{ end }}
+  class="headline{{ with .Attributes.class }} {{ . }}{{ end }}"
+  {{- range $k, $v := .Attributes }}
+    {{- if ne $k "class" }} {{ $k }}="{{ $v }}"{{ end -}}
+  {{- end -}}>
+  <span>{{ .Text | safeHTML }}</span>
+  <video class="headline-film" src="{{ "video.webm" | relURL }}" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
+</{{ $tag }}>
