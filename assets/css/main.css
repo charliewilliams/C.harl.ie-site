@@ -1,36 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Source+Sans+3:wght@400;500;600&display=swap');
+
 :root {
-  --color-background: #f5f0ea;
-  --color-ink: #322015;
-  --color-muted: #6d5b4c;
-  --color-accent-1: #c06c49;
-  --color-accent-2: #2d5d56;
+  --color-background: #ffffff;
+  --color-theme: #1f3c88;
+  --color-theme-light: #e6ecff;
+  --color-text: #1b2330;
+  --color-muted: #56607a;
+  --font-headline: 'Bungee Inline', 'Source Sans 3', sans-serif;
+  --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: "Source Serif 4", Georgia, serif;
+  font-family: var(--font-body);
   background: var(--color-background);
-  color: var(--color-ink);
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
 
 a {
-  color: inherit;
+  color: var(--color-theme);
+  text-decoration: none;
+  transition: color 200ms ease;
 }
 
 a:hover,
 a:focus {
-  color: var(--color-accent-1);
+  color: #12245c;
 }
 
 .site-frame {
@@ -39,78 +46,42 @@ a:focus {
   min-height: 100vh;
 }
 
-.site-header {
-  padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1.5rem, 4vw, 4rem);
-}
-
-.site-title {
-  font-family: "Fraunces", "Source Serif 4", serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 700;
-  letter-spacing: 0.015em;
-  margin: 0;
-}
-
 .site-content {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
+.home .site-frame {
+  min-height: 100vh;
+}
+
+.home .site-content {
+  flex: 1;
+}
+
+.home .split-landing {
+  flex: 1;
+  min-height: 100vh;
+}
+
 .split-landing {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  min-height: 50vh;
 }
 
 .split-panel {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
-  position: relative;
-  overflow: hidden;
-  color: #fff;
-  transition: transform 250ms ease, box-shadow 250ms ease;
-}
-
-.split-panel.music {
-  background: linear-gradient(135deg, var(--color-accent-1), #e39a79);
-}
-
-.split-panel.tech {
-  background: linear-gradient(135deg, var(--color-accent-2), #458b7f);
-}
-
-.split-panel h2 {
-  font-family: "Fraunces", "Source Serif 4", serif;
-  font-size: clamp(3rem, 10vw, 8rem);
-  text-transform: lowercase;
-  margin: 0;
-  letter-spacing: -0.02em;
-}
-
-.split-panel:hover,
-.split-panel:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 50px -20px rgba(0, 0, 0, 0.35);
-}
-
-.split-panel::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.07);
-  mix-blend-mode: screen;
-  opacity: 0;
-  transition: opacity 250ms ease;
-}
-
-.split-panel:hover::after,
-.split-panel:focus-within::after {
-  opacity: 1;
+  padding: clamp(2rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
+  background: var(--color-theme-light);
+  color: var(--color-theme);
+  border: 3px solid var(--color-theme);
+  transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
 }
 
 .split-panel a {
@@ -119,42 +90,71 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  font-weight: 600;
   color: inherit;
 }
 
 .split-panel span {
-  position: relative;
-  z-index: 1;
+  font-family: var(--font-headline);
+  font-size: clamp(3.5rem, 10vw, 8.5rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.split-panel:hover,
+.split-panel:focus-within {
+  background: var(--color-theme);
+  color: #fff;
+  border-color: #12245c;
 }
 
 .main-content {
-  max-width: 72ch;
-  width: 100%;
-  margin: 0 auto;
-  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 6vw, 5rem) clamp(4rem, 6vw, 6rem);
+  width: min(100%, 50vw);
+  max-width: 1040px;
+  margin: 0;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 6vw, 5rem) clamp(4rem, 6vw, 6rem) clamp(2rem, 6vw, 5rem);
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+  font-family: var(--font-headline);
+  letter-spacing: 0.04em;
+  margin-top: 0;
+  color: var(--color-theme);
 }
 
 .main-content h1 {
-  font-family: "Fraunces", "Source Serif 4", serif;
-  font-size: clamp(2.25rem, 4vw, 3.25rem);
-  margin-top: 0;
-  letter-spacing: -0.015em;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+}
+
+.main-content h1:first-child {
+  width: 100%;
+  max-width: none;
 }
 
 .main-content h2 {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  margin-top: 2.5rem;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  margin-top: 3rem;
 }
 
-.main-content p,
-.main-content li {
-  line-height: 1.6;
-  font-size: 1.05rem;
+.main-content h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  margin-top: 2.25rem;
+}
+
+
+.main-content h3 + p {
+  margin-top: 0.75rem;
+  margin-bottom: 1.35rem;
+  padding-left: clamp(0.5rem, 3vw, 2rem);
   color: var(--color-muted);
+  line-height: 1.7;
 }
 
+.main-content h3 + p strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
 .section-meta {
   margin-bottom: 2rem;
   color: var(--color-muted);
@@ -164,31 +164,43 @@ a:focus {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  text-decoration: none;
   padding: 0.85rem 1.5rem;
-  background: var(--color-accent-2);
+  background: var(--color-theme);
   color: #fff;
   border-radius: 999px;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  transition: background 200ms ease, transform 200ms ease;
+  letter-spacing: 0.05em;
+  transition: background-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+  box-shadow: 0 6px 18px rgba(31, 60, 136, 0.18);
 }
 
 .cv-button:hover,
 .cv-button:focus {
-  background: #1d433e;
-  transform: translateY(-2px);
+  background: #12245c;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(18, 36, 92, 0.25);
 }
 
-footer {
-  padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1.5rem, 4vw, 4rem);
-  color: var(--color-muted);
-  font-size: 0.95rem;
+@media (max-width: 1100px) {
+  .main-content {
+    width: min(100%, 60vw);
+    padding-right: clamp(1.5rem, 8vw, 6rem);
+    padding-left: clamp(1.5rem, 8vw, 6rem);
+  }
 }
 
 @media (max-width: 700px) {
   .split-panel {
     min-height: 40vh;
   }
-}
 
+  .split-panel span {
+    font-size: clamp(2.8rem, 12vw, 5rem);
+  }
+
+  .main-content {
+    width: 100%;
+    padding: clamp(2rem, 6vw, 3rem) clamp(1.25rem, 6vw, 2rem) clamp(3rem, 7vw, 4rem);
+  }
+
+}
