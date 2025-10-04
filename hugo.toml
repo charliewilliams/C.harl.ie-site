@@ -7,8 +7,8 @@ enableRobotsTXT = true
 
 [params]
 name = 'Charlie Hooper-Williams'
-role = 'Technologist & Musician'
-cv_url = '/cv.pdf'
+role = 'CTO, CPO & Lead iOS Developer'
+cv_url = '/CHooperWilliams-tech-CV-2025.pdf'
 email = 'c@harl.ie'
 
 [markup]
