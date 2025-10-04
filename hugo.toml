@@ -1,0 +1,11 @@
+baseURL = 'https://c.harl.ie/'
+languageCode = 'en-us'
+title = 'C.harl.ie'
+copyright = ''
+canonifyURLs = true
+enableRobotsTXT = true
+
+[params]
+name = 'Charlie Harle'
+role = 'Technologist & Musician'
+cv_url = '/cv.pdf'
