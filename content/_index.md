@@ -17,16 +17,16 @@ CTO and product lead for a dating startup. Onshored the agency-built MVP, built 
 ### Mountain Health &bull; 2022-2024
 Lead iOS engineer for a telehealth platform, protecting patient privacy and maintaining uptime for clinician-patient communication.
 
-### Homer Learning / Speakaboos &bull; 2016-2018
+### Homer Learning / Speakaboos &bull; 2016-18
 Led the mobile engineering team through the transition to Swift and a successful post-acquisition integration.
 
 ### Jingle+ &bull; 2014
 Physical-modeling shaker app with over half a million downloads.
 
 ### Shazam &bull; 2012-14
-Owned the listening animations on the world-leading music and TV recognition app during a 4.5-star, 250-million-download expansion with extensive Apple feature placements.
+Designed and coded the 'listening' animations on the world-leading music and TV recognition app during a 4.5-star, 250-million-download expansion with extensive Apple feature placements.
 
-### SingSmash &bull; 2010-2011
+### SingSmash &bull; 2010-11
 Developed a singing-controlled iOS game featured by BBC Music Magazine, Classic FM, and ITV, celebrated with a 4.5-star rating.
 
 ## Education
@@ -34,10 +34,10 @@ Developed a singing-controlled iOS game featured by BBC Music Magazine, Classic 
 ### University of Cambridge &bull; 2012
 Centre for Music and Science - MPhil (Distinction)
 
-### Columbia College &bull; 2006-2010
+### Columbia College &bull; 2006-10
 Lecturer, MFA Music Composition for the Screen
 
-### Northwestern University &bull; 2001-2003
+### Northwestern University &bull; 2001-03
 School of Music - Faculty member
 
 ### Northwestern University &bull; 2001
