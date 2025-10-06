@@ -3,6 +3,7 @@
 {{- with .Attributes.class -}}
   {{- $class = printf "%s %s" $class . -}}
 {{- end -}}
+{{- $videoSrc := partialCached "headline-video-src.html" (dict "Site" .Page.Site) "headline-video" -}}
 {{- $attrs := "" -}}
 {{- with .Anchor -}}
   {{- $attrs = printf "%s id=\"%s\"" $attrs . -}}
@@ -13,5 +14,5 @@
     {{- $attrs = printf "%s %s=\"%s\"" $attrs $k $v -}}
   {{- end -}}
 {{- end -}}
-{{- $content := printf "<span>%s</span><video class=\"headline-film\" src=\"%s\" autoplay loop muted playsinline preload=\"auto\" aria-hidden=\"true\"></video>" (.Text | safeHTML) (relURL "video.webm") -}}
+{{- $content := printf "<span>%s</span><video class=\"headline-film\" src=\"%s\" autoplay loop muted playsinline preload=\"auto\" aria-hidden=\"true\"></video>" (.Text | safeHTML) $videoSrc -}}
 {{- printf "<%s%s>%s</%s>" $tag $attrs $content $tag | safeHTML -}}

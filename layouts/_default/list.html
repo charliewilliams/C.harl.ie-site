@@ -3,7 +3,7 @@
     {{ with .Title }}
       <h1 class="headline">
         <span>{{ . }}</span>
-        <video class="headline-film" src="{{ "video.webm" | relURL }}" autoplay loop muted playsinline preload="auto"></video>
+        <video class="headline-film" src="{{ partialCached "headline-video-src.html" (dict "Site" $.Site) "headline-video" }}" autoplay loop muted playsinline preload="auto"></video>
       </h1>
     {{ end }}
     <div class="content-body">
