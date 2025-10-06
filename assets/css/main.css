@@ -206,6 +206,12 @@ a:focus:not(.cta-button) {
     margin-top: clamp(1.5rem, 6vw, 2rem);
   }
 
+  .headline span {
+    white-space: normal;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
   .main-content > .headline:first-of-type span {
     white-space: normal;
     word-break: break-word;
