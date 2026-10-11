@@ -219,3 +219,44 @@ a:focus:not(.cta-button) {
   }
 
 }
+
+/* App product pages (layout: app) */
+.app-tagline {
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+.app-screenshots {
+  width: 100%;
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin-top: clamp(2rem, 5vw, 3rem);
+  padding-bottom: 0.75rem;
+}
+
+.app-screenshots > * {
+  flex: 0 0 clamp(180px, 22vw, 260px);
+  aspect-ratio: 1320 / 2868;
+  border-radius: 1.5rem;
+  scroll-snap-align: start;
+  box-shadow: 0 6px 18px rgba(31, 60, 136, 0.18);
+}
+
+.app-screenshots img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.app-screenshot-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-theme-light);
+  border: 2px dashed var(--color-theme);
+  color: var(--color-muted);
+  font-weight: 600;
+}

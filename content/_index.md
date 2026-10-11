@@ -20,7 +20,7 @@ Lead iOS engineer for a telehealth platform, protecting patient privacy and main
 ### Homer Learning / Speakaboos &bull; 2016-18
 Led the mobile engineering team through the transition to Swift and a successful post-acquisition integration.
 
-### Jingle+ &bull; 2014
+### [Jingle+](/jingle/) &bull; 2014
 Physical-modeling shaker app with over half a million downloads.
 
 ### Shazam &bull; 2012-14
